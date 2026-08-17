@@ -1,0 +1,18 @@
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        int ind[128] = {0};
+        fill(ind,ind+128,-1);
+        int start=0;
+        int longe=0;
+        for(int i=0;i<s.size();i++){
+            unsigned char c = s[i];
+            if(ind[c]>=start){
+                start = ind[c]+1;
+            }
+            ind[c]=i;
+            longe = max(longe,i-start+1);
+        }
+    return longe;
+    }
+};
