@@ -2,19 +2,17 @@ class Solution {
 
 public:
 
-    int countCommas(int n) {
+    long long countCommas(long long n) {
 
-        if(n<1000){
+        long long sum=0;
 
-            return 0;
+        for(long long x=1000;x<=n;x*=1000){
 
-        }
-
-        else{
-
-            return n-999;
+            sum+=n-x+1;
 
         }
+
+        return sum;
 
     }
 
