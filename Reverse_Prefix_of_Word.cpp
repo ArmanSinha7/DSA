@@ -2,6 +2,7 @@ class Solution {
 public:
     string reversePrefix(string s, int k) {
         string ans;
+        ans.reserve(s.size());
         for(int i=k-1;i>=0;i--){
             ans+=s[i];
         }
