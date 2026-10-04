@@ -6,16 +6,15 @@ public:
             total+=nums[i];
         }
 
-        vector<int> ans;
         int left=0;
 
         for(int i=0;i<nums.size();i++){
             int current=nums[i];
             total-=current;
-            ans.push_back(abs(left-total));
+            nums[i]=abs(left-total);
             left+=current;
         }
 
-        return ans;
+        return nums;
     }
 };
