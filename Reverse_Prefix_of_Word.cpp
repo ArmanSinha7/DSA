@@ -7,13 +7,11 @@ public:
             return word;
         }
 
-        int left = 0;
-        int right = ind;
-
-        while(left < right){
-            swap(word[left], word[right]);
+        int left=0;
+        while(left<ind){
+            swap(word[left],word[ind]);
             left++;
-            right--;
+            ind--;
         }
 
         return word;
