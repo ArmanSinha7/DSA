@@ -1,17 +1,19 @@
 class Solution {
 public:
     string reversePrefix(string word, char ch) {
-        int ind = word.find(ch);
-
-        if(ind == string::npos){
-            return word;
+        int ind=-1;
+        for(int i=0;i<word.size();i++){
+            if(word[i]==ch){
+                ind=i;
+                break;
+            }
         }
 
-        int left=0;
-        while(left<ind){
+        int left = 0;
+        while(left<=ind){
             swap(word[left],word[ind]);
-            left++;
             ind--;
+            left++;
         }
 
         return word;
