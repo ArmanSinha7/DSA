@@ -8,14 +8,14 @@ public:
                 break;
             }
         }
-
         int left = 0;
         while(left<=ind){
-            swap(word[left],word[ind]);
+            char t = word[left];
+            word[left]=word[ind];
+            word[ind]=t;
             ind--;
             left++;
         }
-
         return word;
     }
 };
