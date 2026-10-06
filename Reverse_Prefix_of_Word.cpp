@@ -7,9 +7,7 @@ public:
             return word;
         }
 
-        string prefix = word.substr(0, ind + 1);
-        reverse(prefix.begin(), prefix.end());
-
-        return prefix + word.substr(ind + 1);
+        reverse(word.begin(), word.begin() + ind + 1);
+        return word;
     }
 };
