@@ -7,11 +7,9 @@ public:
             return word;
         }
 
-        string ans = word.substr(0, ind + 1);
-        for(int i = ind; i >= 0; i--){
-            ans[ind - i] = word[i];
-        }
+        string prefix = word.substr(0, ind + 1);
+        reverse(prefix.begin(), prefix.end());
 
-        return ans + word.substr(ind + 1);
+        return prefix + word.substr(ind + 1);
     }
 };
